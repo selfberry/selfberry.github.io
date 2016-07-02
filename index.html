@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Selfberry</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Selfberry</h1>
+					
+					<p>Trophée Objets Connectés et Services</p>
+						<p>Bruce LANE - Sébastien MASSIAUX
+					</p>
+				</section>
+
+				<section>
+					<h1>Générateur de selfies</h1>
+					<p>
+					Cas d'usage: une personne se présente devant une borne à selfie, appuie sur des boutons pour choisir un effet visuel.
+					<img width="640" height="480" src="media/franck.jpg" />
+					</p>
+				</section>
+
+				<section>						
+					<p>
+					La caméra enregistre une dizaine d'images et les compile dans un GIF animé, pouvant être téléchargé sur un site Internet prévu à cet effet.
+					</p>
+					<img width="640" height="480" src="media/giphy.gif" />
+					<p>
+					Partage sur les réseaux sociaux possible.	 
+					</p>
+				</section>
+
+				<section>
+					<h2>Installation matérielle</h2>
+						<img width="600" height="334" src="media/selfberrytft28-300x168.jpg" />
+					<ul>
+						<li>boîte avec boutons arcade</li>
+						<li>camera standard raspberry pi</li>
+						<li>afficheur sur Arduino</li>
+						<li>module TFT 2.8</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Installation logicielle</h2>
+					<img width="640" height="291" src="media/ofrb.jpg" />
+					<ul>
+						<li>système d'exploitation Raspbian</li>
+						<li>openFrameworks (C++)</li>
+						<li>effets (shaders openGL)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Test du SelfBerry</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/KapwlK7NpWk" frameborder="0" allowfullscreen></iframe>
+					<p>Experience Vj<br />
+La Zonmé - Nice<br />
+Evénement du 21 au 23 avril<br /> <a href="https://www.facebook.com/events/1763476167206119/">(lien Facebook)</a>
+</p>
+				</section>
+				<section>
+					<h2>Construisez-la vous même</h2>
+					<img width="600" height="334" src="media/funplan.jpg" />
+					<ul>
+						<li>plans disponibles</li>
+						<li>code source sur github</li>
+						<li>article sur http://www.sofab.tv/2016/04/projet-selfberry/</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Installation kit 4G for IoT</h2>
+					<img width="600" height="334" src="media/4g.JPG" />
+					<ul>
+						<li>console administration</li>
+						<li>mises à jour</li>
+						<li>webcom basé sur nodejs</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Compte Datavenue</h2>
+					<img width="600" height="447" src="media/sfdatavenue.jpg" />
+					<p>
+					<ul>
+						<li>clés</li>
+						<li>applications</li>
+					</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>SDK Datavenue</h2>
+					<img width="464" height="227" src="media/nodejsexemple.jpg" />
+					<p>
+					Exemple nodejs 
+					</p>
+				</section>
+	
+				<section>
+					<h2>Merci pour l'attention!</h2>
+					<img width="512" height="512" src="media/merci.gif" />					
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
